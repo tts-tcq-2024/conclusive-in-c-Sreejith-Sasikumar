@@ -3,5 +3,5 @@
 
 TEST(TypeWiseAlertTestSuite,InfersBreachAccordingToLimits) {
 
-
+EXPECT_EQ(inferBreach(-2.5, 0, 35), TOO_LOW);
 }
