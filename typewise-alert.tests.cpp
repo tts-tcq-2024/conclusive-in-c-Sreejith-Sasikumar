@@ -20,11 +20,14 @@ TEST(TypeWiseAlertTestSuite,InfersBreachAccordingToLimits) {
   checkAndAlert(TO_CONTROLLER, batteryC, 46);   //Tests HI_ACTIVE_COOLING TOO_HIGH breach alert TO_CONTROLLER
 
   checkAndAlert(TO_EMAIL, batteryA, -2.5);    //Tests PASSIVE_COOLING TOO_LOW breach alert TO_EMAIL
+  checkAndAlert(TO_EMAIL, batteryA, 5);       //Normal - no mails
   checkAndAlert(TO_EMAIL, batteryA, 36);      //Tests PASSIVE_COOLING TOO_HIGH breach alert TO_EMAIL
 
   checkAndAlert(TO_EMAIL, batteryB, -1);    //Tests MED_ACTIVE_COOLING TOO_LOW breach alert TO_EMAIL
+  checkAndAlert(TO_EMAIL, batteryA, 36);    //Normal - no mails
   checkAndAlert(TO_EMAIL, batteryB, 41);    //Tests MED_ACTIVE_COOLING TOO_HIGH breach alert TO_EMAIL
 
   checkAndAlert(TO_EMAIL, batteryC, -10);    //Tests HI_ACTIVE_COOLING TOO_LOW breach alert TO_EMAIL
+  checkAndAlert(TO_EMAIL, batteryA, 42);     //Normal - no mails
   checkAndAlert(TO_EMAIL, batteryC, 46);     //Tests HI_ACTIVE_COOLING TOO_HIGH breach alert TO_EMAIL
 }
