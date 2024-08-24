@@ -31,9 +31,5 @@ void checkAndAlert(
 void sendToController(BreachType breachType);
 void sendToEmail(BreachType breachType);
 
-#define COOLING_LOW_LIM 0
-#define PASSIVE_COOL_HI_LIM 35
-
-#define MEDIUM_ACTIVE_COOL_HI_LIM 40
-
-#define HI_ACTIVE_COOL_HI_LIM 45
+int lowerCoolingLimits[] = {0, 0, 0};
+int upperCoolingLimits[] = {35, 40, 45};
