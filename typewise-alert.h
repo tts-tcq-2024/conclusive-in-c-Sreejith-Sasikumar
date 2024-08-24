@@ -30,6 +30,3 @@ void checkAndAlert(
 
 void sendToController(BreachType breachType);
 void sendToEmail(BreachType breachType);
-
-int lowerCoolingLimits[] = {0, 0, 0};
-int upperCoolingLimits[] = {35, 40, 45};
